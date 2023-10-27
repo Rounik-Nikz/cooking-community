@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact || Final</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+</head>
+
+<body style="background-image: -webkit-linear-gradient(200deg, aliceblue, rgb(167, 235, 255),aliceblue);">
+
+    <!-- nav  -->
+    <nav class="navbar">
+        <div class="nav-center">
+            <div class="nav-header">
+                <a href="index.html" class="nav-logo">
+                    <img src="./assets/logo.svg" alt="simply recipes" />
+                </a>
+                <button class="nav-btn btn">
+                    <i class="fas fa-align-justify"></i>
+                </button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link"> home </a>
+                <a href="about.html" class="nav-link"> about </a>
+                <a href="tags.html" class="nav-link"> tags </a>
+                <a href="recipes.html" class="nav-link"> recipes </a>
+                <a href="search.html" class="nav-link"> search </a>
+                <a href="add-recipe.html" class="nav-link"> Add recipes </a>
+                <a href="login.html" class="nav-link">login </a>
+
+                <div class="nav-link contact-link">
+                    <a href="contact.html" class="btn"> contact </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end of nav -->
+    <main class="page">
+        <!-- header -->
+        <header class="hero">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1>simply recipes</h1>
+                    <h4>no fluff, just recipes</h4>
+                </div>
+            </div>
+        </header>
+        <section class="contact-container">
+            <article class="contact-info">
+                <h3>Want To Add Your Own Recipes?</h3>
+                <p>
+                    Please feel free to contribute to the community and add your own unique and creative recipes
+                </p>
+                <p>Simply Recipes always at your Rescue!</p>
+                <p>
+                    Healthy, tasty and easy to make recipes will be provided.
+                </p>
+            </article>
+    
+
+            <div class="container">
+                <!-- <h1>Submit a Recipe</h1> -->
+                <form id="recipeForm" enctype="multipart/form-data">
+                    <label for="recipeName">Recipe Name:</label>
+                    <input type="text" id="recipeName" name="recipeName" required>
+
+                    <label for="ingredients">Ingredients:</label>
+                    <textarea id="ingredients" name="ingredients" required></textarea>
+
+                    <label for="instructions">Instructions:</label>
+                    <textarea id="instructions" name="instructions" required></textarea>
+
+                    <label for="image">Image:</label>
+                    <input type="file" id="image" name="image">
+
+                    <button type="submit" id="submitBtn">Submit Recipe</button>
+                </form>
+            </div>
+
+           
+    </main>
+    <!-- footer -->
+    <footer class="page-footer">
+        <p>
+            &copy; <span id="date"></span>
+            <span class="footer-logo">SimplyRecipes</span>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

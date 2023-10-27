@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simply Recipes || Final</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body style="background-image: -webkit-linear-gradient(200deg, aliceblue, rgb(167, 235, 255),aliceblue);">
+
+    <!-- nav  -->
+    <nav class="navbar">
+        <div class="nav-center">
+            <div class="nav-header">
+                <a href="index.html" class="nav-logo">
+                    <img src="./assets/logo.svg" alt="simply recipes" />
+                </a>
+                <button class="nav-btn btn">
+                    <i class="fas fa-align-justify"></i>
+                </button>
+
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link"> home </a>
+                <a href="about.html" class="nav-link"> about </a>
+                <a href="tags.html" class="nav-link"> tags </a>
+                <a href="recipes.html" class="nav-link"> recipes </a>
+                <a href="search.html" class="nav-link">Search</a>
+                <a href="add-recipe.html" class="nav-link"> Add recipes </a>
+                <a href="login.html" class="nav-link">login </a>
+
+                <div class="nav-link contact-link">
+                    <a href="contact.html" class="btn"> contact </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end of nav -->
+    <!-- main -->
+    <main class="page">
+        <!-- header -->
+        <header class="hero">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1>simply recipes</h1>
+                    <h2>no fluff, just recipes</h2>
+                </div>
+            </div>
+        </header>
+        <!-- end of header -->
+        <!-- Search bar -->
+        <div class="search-container">
+            <h2>Search SimplyRecipes</h2>
+            <input type="text" id="myInput" placeholder="Enter Recipe Name" onkeyup="searchFun()">
+            <button id="search-button">Search</button>
+            <!-- Search bar end -->
+            <!-- Recipe table -->
+            <table class="recipe-table" id="myTable" style="border: 2px solid black;">
+                <thead>
+                    <tr>
+                        <th>Recipe Name</th>
+                        <th>Tag</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Replace the following rows with your recipe data -->
+                    <tr>
+                        <td>Greek Ribs</td>
+                        <td>Non Vegetarain </td>
+                        <td> <a href="single-recipe-greekribs.html" class="recipe">
+                                <img src="./assets/recipes/recipe-greekribs.jpeg" class="img recipe-img" alt="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Banana Pancakes</td>
+                        <td> Vegetarain </td>
+                        <td> <a href="single-recipe.html" class="recipe">
+                                <img src="./assets/recipes/recipe-bpancake.jpeg" class="img recipe-img" alt="" /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Crane Asada</td>
+                        <td> Non Vegetarain </td>
+                        <td> <a href="single-recipe-crane-asada.html" class="recipe">
+                                <img src="./assets/recipes/recipe-crane.jpeg" class="img recipe-img" alt="" /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Gulab Jamun</td>
+                        <td> Vegetarain </td>
+                        <td> <a href="single-recipe-gulabj.html" class="recipe">
+                                <img src="./assets/recipes/recipe-gulabjamun.jpg" class="img recipe-img" alt="" /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Vegetable Soup</td>
+                        <td> Vegetarain </td>
+                        <td> <a href="single-recipe-vegetablesoup.html" class="recipe">
+                                <img src="./assets/recipes/recipe-veggiesoup.jpeg" class="img recipe-img" alt="" /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Chicken Club Sandwich</td>
+                        <td> Non Vegetarain </td>
+                        <td> <a href="single-recipe-sand-nonv.html" class="recipe">
+                                <img src="./assets/recipes/recipe-sandwich-nonv.jpg" class="img recipe-img" alt="" />
+                        </td>
+                    </tr>
+                    <!-- Add more recipe rows here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- end of main -->
+    <!-- footer -->
+    <footer class="page-footer">
+        <p>
+            &copy; <span id="date"></span>
+            <span class="footer-logo">SimplyRecipes</span>
+        </p>
+    </footer>
+
+    <script>
+        const searchFun = () => {
+            let filter = document.getElementById('myInput').value.toUpperCase();
+
+            let myTable = document.getElementById('myTable');
+
+            let tr = myTable.getElementsByTagName('tr');
+
+            for (var i = 0; i < tr.length; i++) {
+                let td = tr[i].getElementsByTagName('td')[0];
+                if (td) {
+                    let textvalue = td.textContent || td.innerHTML;
+                    if (textvalue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = '';
+                    } else {
+                        tr[i].style.display = 'none';
+                    }
+                }
+
+
+
+
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

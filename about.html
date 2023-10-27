@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About || Final</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+  <!-- normalize -->
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="./css/main.css" />
+  
+</head>
+
+<body style="background-image: -webkit-linear-gradient(200deg, aliceblue, rgb(167, 235, 255),aliceblue);">
+
+  <!-- nav  -->
+  <nav class="navbar">
+    <div class="nav-center">
+      <div class="nav-header">
+        <a href="index.html" class="nav-logo">
+          <img src="./assets/logo.svg" alt="simply recipes" />
+        </a>
+        <button class="nav-btn btn">
+          <i class="fas fa-align-justify"></i>
+        </button>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link"> home </a>
+        <a href="about.html" class="nav-link"> about </a>
+        <a href="tags.html" class="nav-link"> tags </a>
+        <a href="recipes.html" class="nav-link"> recipes </a>
+        <a href="search.html" class="nav-link"> search </a>
+        <a href="add-recipe.html" class="nav-link"> Add recipes </a>
+        <a href="login.html" class="nav-link">login </a>
+
+        <div class="nav-link contact-link">
+          <a href="contact.html" class="btn"> contact </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- end of nav -->
+  <main class="page">
+    <section class="about-page">
+      <article>
+        <h2>SimplyRecipes always at your Rescue!</h2>
+        <p>
+          Welcome to Simply Recipes, a website dedicated to sharing delicious recipes for food enthusiasts around the
+          world.
+        </p>
+        <p>
+          Healthy, tasty and easy to prepare recipe will be provided.
+        </p>
+        <a href="contact.html" class="btn"> contact </a>
+      </article>
+      <!-- needs fixes -->
+      <img src="./assets/about.jpeg" alt="Person Pouring Salt in Bowl" class="img about-img" />
+    </section>
+    <section class="featured-recipes">
+      <h5 class="featured-title">Look At This Awesomesouce!</h5>
+      <div class="recipes-list">
+        <!-- single recipe -->
+        <a href="single-recipe-crane-asada.html" class="recipe">
+          <img src="./assets/recipes/recipe-crane.jpeg" class="img recipe-img" alt="" />
+          <h5>Crane Asada</h5>
+          <p>Prep : 15min | Cook : 5min</p>
+        </a>
+        <!-- end of single recipe -->
+        <!-- single recipe -->
+        <a href="single-recipe-greekribs.html" class="recipe">
+          <img src="./assets/recipes/recipe-greekribs.jpeg" class="img recipe-img" alt="" />
+          <h5>Greek Ribs</h5>
+          <p>Prep : 15min | Cook : 5min</p>
+        </a>
+        <!-- end of single recipe -->
+        <!-- single recipe -->
+        <a href="single-recipe-vegetablesoup.html" class="recipe">
+          <img src="./assets/recipes/recipe-veggiesoup.jpeg" class="img recipe-img" alt="" />
+          <h5>Vegetable Soup</h5>
+          <p>Prep : 15min | Cook : 5min</p>
+        </a>
+        <!-- end of single recipe -->
+      </div>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer class="page-footer">
+    <p>
+      &copy; <span id="date"></span>
+      <span class="footer-logo">SimplyRecipes</span>
+    </p>
+  </footer>
+  <script src="./js/app.js"></script>
+  
+</body>
+
+</html>
